@@ -12,7 +12,7 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-app.use("/",res.send("Pixisphere Backend Auth Running"));
+app.use("/", (req, res) => { res.send("Pixisphere Backend Auth Running") });
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
